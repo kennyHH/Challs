@@ -1,6 +1,6 @@
 # Enusec Challenges
 
-A collection of cybersecurity challenges for learning and practice.
+A collection of cybersecurity challenges for Freshers 2025.
 
 ## Challenge List
 
