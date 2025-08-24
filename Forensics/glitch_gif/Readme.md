@@ -14,11 +14,15 @@ You're given a glitched GIF file that appears to be heavily distorted. Your task
 
 ## Files
 
-- `glitch.gif` or `glitch_2.gif`- The glitched GIF's
+- `glitch.gif` or `glitch_2.gif`
 
 Animation in `glitch.gif` is faster. 
 Both contain a flag. 
 Pick only one for the challenge. 
+
+The flag is hidden in 
+- frame18 - `glitch.gif` 
+- frame52-54 - `glitch2.gif`
 
 ## Objective
 
@@ -34,7 +38,7 @@ The flag is hidden in one of the frames of the GIF animation. To solve this chal
    - Image editing software (GIMP, Photoshop, etc.)
    - Python with PIL: `Image.open('glitch.gif')`
 
-The flag is hidden in frame18 - `final_glitch.gif` or frame52-54 - `final_glitch_v2`
+
 The flag is: `freshers{y0u_g0t_gl1tch3d}`
 
 ## Hint
