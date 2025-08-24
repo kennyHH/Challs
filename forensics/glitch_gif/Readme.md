@@ -14,7 +14,7 @@ You're given a glitched GIF file that appears to be heavily distorted. Your task
 
 ## Files
 
-- `final_glitch2.gif` - The glitched animation file
+- `final_glitch.gif` or `final_glitch_2.gif`- The glitched animation file
 
 ## Objective
 
@@ -30,10 +30,8 @@ The flag is hidden in one of the frames of the GIF animation. To solve this chal
    - Image editing software (GIMP, Photoshop, etc.)
    - Python with PIL: `Image.open('glitch.gif')`
 
-2. **Examine each frame** carefully - most will be glitched/corrupted, but one frame should contain the readable flag.
-
-The flag format is: `CTF{...}`
-
+The flag is hidden in frame18 - `final_glitch.gif` or frame52-54 - `final_glitch_v2`
+The flag format is: `freshers{...}`
 
 
 ## Learning Objectives
