@@ -14,7 +14,9 @@ You're given a glitched GIF file that appears to be heavily distorted. Your task
 
 ## Files
 
-- `final_glitch.gif` or `final_glitch_2.gif`- The glitched animation file
+- `final_glitch.gif` or `final_glitch_2.gif`- The glitched GIF
+
+Animation in Final_glitch.gif is faster. Both contain a flag. Pick only one for the challenge. 
 
 ## Objective
 
