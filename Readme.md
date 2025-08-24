@@ -7,7 +7,7 @@ A collection of cybersecurity challenges for learning and practice.
 | Name | Category | Difficulty | Description | Status |
 |------|----------|------------|-------------|--------|
 |Glitch in the matrix      |Forensics          |Easy/Medium            |A corrupted GIF file that requires frame-by-frame analysis to locate a hidden flag within the individual frames.              |   🟢     |
-|Magic bytes     |Forensics          |Easy            |A JPEG image with corrupted file header magic bytes that need to be restored to view the hidden flag.           |  🔴      |
+|Magic bytes     |Forensics          |Easy            |A JPEG image with corrupted file header (magic bytes) that need to be restored to view the hidden flag.           |  🔴      |
 |I'm lost      |Forensics          |Easy            |A JPEG file where the embedded thumbnail has been replaced with flag image.             |   🔴     |
 |Hiding on the bottom      |Forensics          |Easy            |A JPEG image with modified height dimensions that hide the bottom portion containing the flag. Requires hex editing to restore proper dimensions.            |   🔴     |
 |Weird traffic      |Forensics          |Medium            |Network traffic capture containing encrypted DNS tunneling communication using dnscat2. Analyze and decrypt the C2 channel to extract the flag.             |   🔴     |
