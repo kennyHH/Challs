@@ -14,9 +14,11 @@ You're given a glitched GIF file that appears to be heavily distorted. Your task
 
 ## Files
 
-- `final_glitch.gif` or `final_glitch_2.gif`- The glitched GIF
+- `glitch.gif` or `glitch_2.gif`- The glitched GIF's
 
-Animation in Final_glitch.gif is faster. Both contain a flag. Pick only one for the challenge. 
+Animation in `glitch.gif` is faster. 
+Both contain a flag. 
+Pick only one for the challenge. 
 
 ## Objective
 
@@ -35,12 +37,13 @@ The flag is hidden in one of the frames of the GIF animation. To solve this chal
 The flag is hidden in frame18 - `final_glitch.gif` or frame52-54 - `final_glitch_v2`
 The flag format is: `freshers{...}`
 
+## Hint
+*Hint: Not all frames are created equal... 👀*
 
 ## Learning Objectives
 
 - Understanding GIF file structure
-- Frame-by-frame analysis techniques  
-- Using multimedia forensics tools
+- Frame-by-frame analysis techniques
 
 ## Author
 
@@ -48,4 +51,3 @@ Created by kennyH
 
 ---
 
-*Hint: Not all frames are created equal... 👀*
