@@ -6,7 +6,7 @@ A collection of cybersecurity challenges for learning and practice.
 
 | Name | Category | Difficulty | Description | Status |
 |------|----------|------------|-------------|--------|
-|Glitch in the matrix      |Forensics          |Easy/Medium            |Split the gif into frames, find flag in the one of the frames              |   🟢     |
+|Glitch in the matrix      |Forensics          |Easy/Medium            |Split the gif into frames, find flag in the one of the frames.              |   🟢     |
 |      |          |            |             |        |
 |      |          |            |             |        |
 |      |          |            |             |        |

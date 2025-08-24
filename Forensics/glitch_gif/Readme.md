@@ -35,7 +35,7 @@ The flag is hidden in one of the frames of the GIF animation. To solve this chal
    - Python with PIL: `Image.open('glitch.gif')`
 
 The flag is hidden in frame18 - `final_glitch.gif` or frame52-54 - `final_glitch_v2`
-The flag format is: `freshers{...}`
+The flag is: `freshers{y0u_g0t_gl1tch3d}`
 
 ## Hint
 *Hint: Not all frames are created equal... 👀*
