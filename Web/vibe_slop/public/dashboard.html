@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Slop - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>🔐 Vibe Slop Dashboard</h1>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+        
+        <div class="dashboard-content">
+            <div class="welcome-card">
+                <h2>Welcome, <span id="username">Loading...</span>!</h2>
+                <div class="user-info">
+                    <p><strong>Account Type:</strong> <span id="account-type" class="badge">Loading...</span></p>
+                    <p><strong>Login Time:</strong> <span id="login-time">Loading...</span></p>
+                </div>
+            </div>
+            
+            <div class="flag-card">
+                <h3>🏁 Admin Panel</h3>
+                <p>Access restricted content and administrative features.</p>
+                
+                <div id="flag-container" class="flag-container">
+                    <button id="view-flag-btn" class="btn btn-primary btn-large" disabled>
+                        <span class="lock-icon">🔒</span>
+                        View Content
+                    </button>
+                    <p id="flag-message" class="flag-message">Only admin users can access this content</p>
+                </div>
+                
+                <div id="flag-display" class="flag-display" style="display: none;">
+                    <h4>🎉 Congratulations!</h4>
+                    <div class="flag-box">
+                        <code id="flag-text">Loading...</code>
+                    </div>
+                    <button id="copy-flag-btn" class="btn btn-secondary">Copy Flag</button>
+                </div>
+                
+                <div id="error-display" class="error-message" style="display: none;"></div>
+            </div>
+        </div>
+        
+        <footer class="dashboard-footer">
+            <p>© 2024 Vibe Slop | Secure Platform</p>
+        </footer>
+    </div>
+    
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

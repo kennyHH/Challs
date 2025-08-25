@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Slop - Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="card-header">
+                <h1>🔐 Vibe Slop</h1>
+                <p class="subtitle">Create Your Account</p>
+            </div>
+            
+            <div class="card-body">
+                <h2>Register</h2>
+                
+                <div id="error-message" class="error-message"></div>
+                <div id="success-message" class="success-message"></div>
+                
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            required 
+                            minlength="3"
+                            maxlength="20"
+                            pattern="[a-zA-Z0-9_]+"
+                            placeholder="Choose a username (3-20 characters)"
+                            autocomplete="username"
+                        >
+                        <small class="form-hint">Alphanumeric characters and underscores only</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required 
+                            minlength="6"
+                            placeholder="Choose a password (min 6 characters)"
+                            autocomplete="new-password"
+                        >
+                        <small class="form-hint">Minimum 6 characters</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirm-password" 
+                            name="confirm-password" 
+                            required 
+                            minlength="6"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                        >
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="terms" required>
+                            <span>I accept the terms and conditions</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span id="btn-text">Register</span>
+                        <span id="btn-loader" class="loader" style="display: none;"></span>
+                    </button>
+                </form>
+                
+                <div class="card-footer">
+                    <p>Already have an account? <a href="/login">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/auth.js"></script>
+</body>
+</html>

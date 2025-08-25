@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  vibe-slop:
+    build: .
+    container_name: vibe-slop-ctf
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=secret123
+      - FLAG=freshers{JWT_C00K13_M4N1PUL4T10N_1S_D4NG3R0US}
+      - DATABASE_PATH=/usr/src/app/database/ctf.db
+      - LOG_LEVEL=info
+    volumes:
+      - ./database:/usr/src/app/database
+      - ./logs:/usr/src/app/logs
+    restart: unless-stopped
+    networks:
+      - ctf-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vibe-slop.rule=Host(`vibe-slop.ctf.local`)"
+      - "traefik.http.services.vibe-slop.loadbalancer.server.port=3000"
+
+networks:
+  ctf-network:
+    driver: bridge
+    name: ctf-network
+
+volumes:
+  database:
+    driver: local
+  logs:
+    driver: local
