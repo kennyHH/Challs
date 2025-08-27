@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVault Pro - Enterprise Employee Management</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>SecureVault Pro</h1>
+                <p>Enterprise Employee Management System</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="user@securevault.local">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+                
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='/register.html'">
+                    Create New Account
+                </button>
+            </form>
+            
+            <div id="errorMessage" class="error-message"></div>
+            <div id="successMessage" class="success-message"></div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 SecureVault Inc. All rights reserved.</p>
+            <p>Version 2.1.0 | <a href="/terms">Terms</a> | <a href="/privacy">Privacy</a></p>
+        </div>
+    </div>
+    
+    <div id="otpModal" class="modal">
+        <div class="modal-content">
+            <h2>Two-Factor Authentication</h2>
+            <p>Enter the 6-digit code from your authenticator app</p>
+            <form id="otpForm">
+                <input type="text" id="otpCode" maxlength="6" pattern="[0-9]{6}" placeholder="000000" required>
+                <button type="submit" class="btn btn-primary">Verify</button>
+                <button type="button" class="btn btn-secondary" onclick="closeOTPModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/js/app.min.js"></script>
+</body>
+</html>

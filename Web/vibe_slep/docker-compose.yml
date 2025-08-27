@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: securevault-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: svadmin
+      MONGO_INITDB_ROOT_PASSWORD: sv2024prod
+      MONGO_INITDB_DATABASE: securevault_prod
+    volumes:
+      - ./database/init.js:/docker-entrypoint-initdb.d/01-init.js:ro
+      - ./database/seed.js:/docker-entrypoint-initdb.d/02-seed.js:ro
+      - mongodb_data:/data/db
+    networks:
+      - securevault-network
+    restart: unless-stopped
+
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: securevault-app
+    depends_on:
+      - mongodb
+    environment:
+      NODE_ENV: production
+      MONGODB_URI: mongodb://svadmin:sv2024prod@mongodb:27017/securevault_prod?authSource=admin
+      JWT_SECRET: sv_jwt_2024_Q4_prod
+      PORT: 3000
+      FLAG_PREFIX: "CTF{n0sql_"
+      API_VERSION: v2
+      INSTANCE_ID: prod-us-east-1
+    ports:
+      - "3000:3000"
+    networks:
+      - securevault-network
+    volumes:
+      - ./config/.system:/var/lib/securevault/.config:ro
+    restart: unless-stopped
+
+networks:
+  securevault-network:
+    driver: bridge
+    name: securevault-network
+
+volumes:
+  mongodb_data:
+    driver: local

@@ -1,0 +1,17 @@
+{
+  "instance": "prod-us-east-1",
+  "region": "us-east-1",
+  "version": "2.1.0",
+  "deployment": {
+    "date": "2024-01-15T00:00:00Z",
+    "build": "b7f4a2c",
+    "branch": "production"
+  },
+  "features": {
+    "export": true,
+    "import": false,
+    "audit": true,
+    "backup": false
+  },
+  "suffix": "m4st3r_2024}"
+}
