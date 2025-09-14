@@ -1,0 +1,46 @@
+{
+  "name": "securevault-pro",
+  "version": "2.1.0",
+  "description": "Enterprise Employee Management System",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.js",
+    "build": "npm run clean && npm run compile && npm run obfuscate",
+    "clean": "rm -rf dist",
+    "compile": "babel src -d dist --copy-files",
+    "obfuscate": "javascript-obfuscator dist --output dist",
+    "test": "echo 'Tests configured' && exit 0"
+  },
+  "author": "SecureVault Inc.",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.9.0",
+    "mongoose": "^7.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "speakeasy": "^2.0.0",
+    "qrcode": "^1.5.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0",
+    "dotenv": "^16.3.1",
+    "cookie-parser": "^1.4.6",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "morgan": "^1.10.0",
+    "base32": "^0.0.7",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "javascript-obfuscator": "^4.0.2",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

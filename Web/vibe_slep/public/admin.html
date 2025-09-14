@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SecureVault Pro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>SecureVault Admin</h2>
+        </div>
+        <div class="nav-menu">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/admin.html" class="active">Admin Panel</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+        <div class="nav-user">
+            <span id="userEmail"></span>
+            <span class="badge" id="userRole"></span>
+        </div>
+    </nav>
+    
+    <div class="admin-container">
+        <div class="sidebar">
+            <h3>Admin Tools</h3>
+            <ul>
+                <li><a href="#employees" class="active">Employees</a></li>
+                <li><a href="#export">Export Data</a></li>
+                <li><a href="#system">System Info</a></li>
+                <li><a href="#audit">Audit Logs</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <section id="employees" class="content-section">
+                <h2>Employee Management</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Total Employees</h4>
+                        <p class="stat-number" id="totalEmployees">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Active</h4>
+                        <p class="stat-number" id="activeEmployees">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Departments</h4>
+                        <p class="stat-number" id="totalDepartments">0</p>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table id="employeeTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Position</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeeList">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="export" class="content-section" style="display:none;">
+                <h2>Export Employee Data</h2>
+                <div class="export-panel">
+                    <form id="exportForm">
+                        <div class="form-group">
+                            <label for="exportFormat">Export Format</label>
+                            <select id="exportFormat" name="format">
+                                <option value="csv">CSV</option>
+                                <option value="json">JSON</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="exportDepartment">Department Filter</label>
+                            <input type="text" id="exportDepartment" name="department" placeholder="e.g., engineering">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dateRange">Date Range</label>
+                            <input type="text" id="dateRange" name="dateRange" placeholder="2024-01-01 to 2024-12-31">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Export Data</button>
+                    </form>
+                    
+                    <div id="exportResult" class="result-box"></div>
+                </div>
+            </section>
+            
+            <section id="system" class="content-section" style="display:none;">
+                <h2>System Information</h2>
+                <div id="systemInfo" class="info-panel">
+                    <p>Loading system information...</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Part 1 of flag: CTF{n0sql_ -->
+    
+    <script src="/js/app.min.js"></script>
+    <script src="/js/admin.min.js"></script>
+</body>
+</html>
