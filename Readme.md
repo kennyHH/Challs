@@ -6,11 +6,11 @@ A collection of cybersecurity challenges for Freshers 2025.
 
 | Name | Category | Difficulty | Description | Status |
 |------|----------|------------|-------------|--------|
-| Glitch in the matrix | Forensics | Easy/Medium | A corrupted GIF file that requires frame-by-frame analysis to locate a hidden flag within the individual frames. | 🟢 |
-| Magic bytes | Forensics | Easy | A JPEG image with corrupted file header (magic bytes) that need to be restored to view the hidden flag. | 🟢 |
-| I'm lost | Forensics | Easy | A JPEG file where the embedded thumbnail has been replaced with flag image. | 🟢 |
-| Signal | Misc | Easy/Medium | An audio file containing SSTV signals that decode to reveal an image with the hidden flag. | 🟢 |
-| Vibe Slop | Web | Easy/Medium | A beginner-friendly web security CTF challenge focused on JWT (JSON Web Token) vulnerabilities | 🟢 |
+| Glitch in the matrix | Forensics | Easy/Medium | A corrupted GIF file that requires frame-by-frame analysis to locate a hidden flag within the individual frames. | ✅ |
+| Magic bytes | Forensics | Easy | A JPEG image with corrupted file header (magic bytes) that need to be restored to view the hidden flag. | ✅ |
+| I'm lost | Forensics | Easy | A JPEG file where the embedded thumbnail has been replaced with flag image. | ✅ |
+| Signal | Misc | Easy/Medium | An audio file containing SSTV signals that decode to reveal an image with the hidden flag. | ✅ |
+| Vibe Slop | Web | Easy/Medium | A beginner-friendly web security CTF challenge focused on JWT (JSON Web Token) vulnerabilities | ✅ |
 
 
 
