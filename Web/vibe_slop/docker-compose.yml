@@ -19,10 +19,6 @@ services:
     restart: unless-stopped
     networks:
       - ctf-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.vibe-slop.rule=Host(`vibe-slop.ctf.local`)"
-      - "traefik.http.services.vibe-slop.loadbalancer.server.port=3000"
 
 networks:
   ctf-network:
