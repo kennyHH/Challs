@@ -31,7 +31,7 @@ Fix the JPG file header:
 
 - Change DE AD BE EF -> ff d8 ff e0
 
-The flag is: `freshers{1M4G3_RESURR3CT1ON}`
+The flag is: `enusec{1M4G3_RESURR3CT1ON}`
 
 ## Learning Objectives
 
