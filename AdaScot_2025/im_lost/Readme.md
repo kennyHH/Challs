@@ -17,8 +17,8 @@ Few red herrings in the JPG to make it more interesting.
 ## Files
 
 - Original_image: `roll_original.jpg`
-- Thumbnail : `roll_thumb`
-- Challenge file: `roll.jpg`
+- Thumbnail : `roll_thumb.jpg`
+- Challenge file: `challenge.jpg`
 
 ## Objective
 
@@ -27,9 +27,9 @@ Analyse the JPG file and extract the flag.
 ## Solution
 
 Users can use different tools to do that , easiest way is to use exiftools:
-`exiftool -b -ThumbnailImage challenge.jpg > thumb.jpg  `
+`exiftool -b -ThumbnailImage challenge.jpg > thumb.jpg`
 
-The flag is: `freshers{th4nk_y0u_gr3gg5}`
+The flag is: `enusec{th4nk_y0u_gr3gg5}`
 
 ## Learning Objectives
 
